@@ -15,7 +15,9 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
-
+app.get("/", (req, res) => {
+  res.send("SmartHub Backend is running ");
+});
 app.use("/api/announcements", require("./routes/announcements"));
 app.use("/api/clubs", require("./routes/clubs"));
 app.use("/api/books", require("./routes/books"));

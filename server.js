@@ -23,7 +23,6 @@ app.use("/api/clubs", require("./routes/clubs"));
 app.use("/api/books", require("./routes/books"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/discussions", require("./routes/discussions"));
-app.use("/api/messages", require("./routes/messages"));
 app.use("/books", express.static("uploads/books"));
 app.use("/files", express.static("uploads"));
 

@@ -25,6 +25,9 @@ app.use("/api/auth", require("./routes/auth"));
 app.use("/api/discussions", require("./routes/discussions"));
 app.use("/books", express.static("uploads/books"));
 app.use("/files", express.static("uploads"));
+const path = require("path");
+
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 const io = new Server(server, {
   cors: {

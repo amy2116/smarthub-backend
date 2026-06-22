@@ -13,6 +13,8 @@ router.get("/", (req, res) => {
 
 router.post("/register", async (req, res) => {
   try {
+    console.log("=== REGISTER HIT ===");
+    console.log(req.body);
     const { name, email, password, username } = req.body;
 
     console.log("Register request:", req.body);
